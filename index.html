@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML lang="ja-JP">
+<head>
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<META http-equiv="Content-Script-Type" content="text/javascript">
+	<META http-equiv="Content-Style-Type" content="text/css">
+	<META name="author" content="DigiSapo">
+	<title>Google Pixel3 Motion Jpeg(MVIMG) Viewer by DigiSapo</title>
+	<link href="assets/css/pixel-motion-image-viewer.css" rel="stylesheet" type="text/css" media="screen" />
+	<!-- loading a-frame library -->
+	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+	<!-- embedded a-scene tag style must be located after loading aframe.js... -->
+	<style type="text/css">
+		a-scene {
+			display: block;
+			position: absolute;
+			top: 0; bottom: 0; left: 0; right: 0;
+			height: 400px; width: 800px;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="margin0">Google Pixel3 Photo File Viewer</h2>
+	<div class="margin0">by <a href="https://www.plaza14.biz/sitio_digisapo/" target="_blank">DigiSapo</a></div>
+	<div><input type="number" id="max-file-size" value="50">MBを越えるサイズのファイルは受けつけない(0にするとサイズチェック無効)</div>
+	<div id="viewer-frame">
+		<input id="file-selector" type="file" accept="image/*,video/mp4" multiple>
+		<div style="height:160px">
+			<p style="font-size: 2em">Drop Files Here</p>
+		</div>
+	</div>
+
+	<div id="export-menu">
+		<div>
+			<strong>EXPORT THIS PHOTO-MOVIE TO MP4</strong>
+		</div>
+		<a id="export-button"></a>
+	</div>
+
+	<div id="panorama-view" class="fs-overlay">
+		<a-scene embedded>
+			<a-assets>
+				<img id="loading" src="./assets/loading.png">
+			</a-assets>
+			<a-sky src="#loading" rotation="0 -100 0"></a-sky>
+			<div id="panorama-view-close">CLOSE<div>
+		</a-scene>
+	</div>
+
+	<!-- loading java scripts  -->
+	<script type="text/javascript" src="assets/js/pixel-motion-image-viewer.js"></script>
+</body>
+</html>
