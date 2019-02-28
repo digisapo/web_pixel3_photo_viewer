@@ -15,6 +15,10 @@ FF と Chrome で動作確認済みだが IE11 は一部のモーションフォトが読み込めない。Chr
 
 モーションフォトの MP4 エクスポートは、Jpeg の EOI 以降のバイナリを切り出してファイルにするだけの機能であるが、この際にマルチトラック MP4 ファイルとして出力される場合が多い。これは Google Pixel3 のモーションフォトの仕様によるものと考えられる。
 
+### 【外部リンク】
+
+ブログ記事: https://plaza14.biz/sitio_digisapo/digimono/20190224-google-pixel3-motion-photo-viewer/
+
 ### - LICENSE -
 
 Copyright (c) 2019 DigiSapo.
